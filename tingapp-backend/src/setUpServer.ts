@@ -7,6 +7,7 @@ import cookieSession from "cookie-session";
 import helmet from "helmet";
 import { StatusCodes } from "http-status-codes";
 import "express-async-errors";
+import { config } from "./config";
 
 const PORT_SERVER = 5000;
 
@@ -28,9 +29,9 @@ export class TingServer {
     app.use(
       cookieSession({
         name: "session",
-        keys: ["test1", "test2"],
+        keys: [config.SECRET_KEY_ONE!, config.SECRET_KEY_TWO!],
         maxAge: 24 * 3 * 60 * 60 * 1000, //3days session expired,
-        secure: false,
+        secure: config.NODE_ENV !== "development", // return false when environment is not development mode
       })
     );
     app.use(hpp());

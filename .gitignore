@@ -7,7 +7,7 @@
 /frontend/build
 
 # misc
-/tingapp-backend/config/config.env
+/tingapp-backend/.env
 /tingapp-frontend/.env.local
 /tingapp-frontend/.env.development.local
 /tingapp-frontend/.env.test.local
