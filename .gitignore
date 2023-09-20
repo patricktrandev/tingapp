@@ -1,0 +1,18 @@
+# dependencies
+/node_modules/
+/tingapp-frontend/node_modules/
+/tingapp-backend/node_modules/
+
+# production
+/frontend/build
+
+# misc
+/tingapp-backend/config/config.env
+/tingapp-frontend/.env.local
+/tingapp-frontend/.env.development.local
+/tingapp-frontend/.env.test.local
+/tingapp-frontend/.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
