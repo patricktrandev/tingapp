@@ -8,9 +8,9 @@ class Config {
   public SECRET_KEY_ONE: string | undefined;
   public SECRET_KEY_TWO: string | undefined;
   public NODE_ENV: string | undefined;
-  private readonly DEFAULT_DB_URL = `mongodb+srv://root:admin123@project-nodejs.3l3kq.mongodb.net/tingapp?retryWrites=true&w=majority`;
+
   constructor() {
-    this.DB_URL = process.env.DB_URL || this.DEFAULT_DB_URL;
+    this.DB_URL = process.env.DB_URL;
     this.PORT_SERVER = process.env.PORT_SERVER || "5001";
     this.SECRET_KEY_ONE = process.env.SECRET_KEY_ONE || "";
     this.SECRET_KEY_TWO = process.env.SECRET_KEY_TWO || "";
